@@ -1,0 +1,10 @@
+"transactionViewControllerTitle" = "Transactions";
+"genericError" = "Oops: %@";
+"serverError" = "Server Error";
+"noDataFound" = "No Data Found";
+"decodingError" = "Unexpected response from the backend";
+"alertButtonTitle" = "OK";
+"alertTitle" = "Sorry, something went wrong";
+"editButtonTitle" = "Edit";
+"deleteButtonTitle" = "Remove";
+"doneButtonTitle" = "Done";

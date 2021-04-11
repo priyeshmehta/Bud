@@ -1,0 +1,6 @@
+framework module Pods_Bud_BudUITests {
+  umbrella header "Pods-Bud-BudUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

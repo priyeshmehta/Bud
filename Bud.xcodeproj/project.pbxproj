@@ -1,0 +1,906 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3665D441261F2582007CF503 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3665D440261F2582007CF503 /* AppDelegate.swift */; };
+		3665D443261F2582007CF503 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3665D442261F2582007CF503 /* SceneDelegate.swift */; };
+		3665D445261F2582007CF503 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3665D444261F2582007CF503 /* TransactionViewController.swift */; };
+		3665D448261F2582007CF503 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3665D446261F2582007CF503 /* Main.storyboard */; };
+		3665D44A261F2582007CF503 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3665D449261F2582007CF503 /* Assets.xcassets */; };
+		3665D44D261F2582007CF503 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3665D44B261F2582007CF503 /* LaunchScreen.storyboard */; };
+		3665D463261F2583007CF503 /* BudUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3665D462261F2583007CF503 /* BudUITests.swift */; };
+		3665D476261F25C7007CF503 /* Transactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3665D475261F25C7007CF503 /* Transactions.swift */; };
+		3665D47E261F25F9007CF503 /* TransactionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3665D47D261F25F9007CF503 /* TransactionsService.swift */; };
+		3665D484261F2668007CF503 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3665D483261F2668007CF503 /* Localizable.strings */; };
+		3665D48D261F26EF007CF503 /* StringHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3665D48C261F26EF007CF503 /* StringHelpers.swift */; };
+		3665D4AD261F3DCC007CF503 /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3665D4AC261F3DCC007CF503 /* TransactionViewModel.swift */; };
+		3665D4B7261F41C3007CF503 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3665D4B5261F41C3007CF503 /* TransactionTableViewCell.swift */; };
+		3665D4B8261F41C3007CF503 /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3665D4B6261F41C3007CF503 /* TransactionTableViewCell.xib */; };
+		3665D4C0261F4737007CF503 /* ImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3665D4BF261F4737007CF503 /* ImageViewExtension.swift */; };
+		3665D4D926204B73007CF503 /* CurrencyFormater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3665D4D826204B73007CF503 /* CurrencyFormater.swift */; };
+		3665D4E3262050C1007CF503 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3665D4E2262050C1007CF503 /* URLSessionMock.swift */; };
+		3665D4E92620518E007CF503 /* DataTestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3665D4E82620518E007CF503 /* DataTestHelper.swift */; };
+		3665D4F1262051EB007CF503 /* TransactionServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3665D4F0262051EB007CF503 /* TransactionServiceMock.swift */; };
+		3665D4F626205F73007CF503 /* TransactionServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3665D4F526205F73007CF503 /* TransactionServiceTests.swift */; };
+		3665D4FC2620622D007CF503 /* TransactionModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3665D4FB2620622D007CF503 /* TransactionModelTests.swift */; };
+		3665D505262063D8007CF503 /* TransactionViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3665D504262063D8007CF503 /* TransactionViewModelTests.swift */; };
+		3665D51626206E04007CF503 /* StringHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3665D51526206E04007CF503 /* StringHelperTests.swift */; };
+		3665D51E26206EAD007CF503 /* CurrencyFormaterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3665D51D26206EAD007CF503 /* CurrencyFormaterTests.swift */; };
+		3665D576262314A8007CF503 /* TableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3665D575262314A8007CF503 /* TableViewCellExtension.swift */; };
+		4512C5C35EDA585E543DA604 /* Pods_BudTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E509B4B6606BA291C696353F /* Pods_BudTests.framework */; };
+		569BAC8FB3521711BF50277F /* Pods_Bud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6F98FA5EE69F0CD1AACA95 /* Pods_Bud.framework */; };
+		AE3B273F3DB33D3EAC40078D /* Pods_Bud_BudUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2DC63ED2D10CEC4C42459E6 /* Pods_Bud_BudUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3665D454261F2583007CF503 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3665D435261F2582007CF503 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3665D43C261F2582007CF503;
+			remoteInfo = Bud;
+		};
+		3665D45F261F2583007CF503 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3665D435261F2582007CF503 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3665D43C261F2582007CF503;
+			remoteInfo = Bud;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0CD8F62C77CADDA9EC4AB23B /* Pods-BudTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BudTests.release.xcconfig"; path = "Target Support Files/Pods-BudTests/Pods-BudTests.release.xcconfig"; sourceTree = "<group>"; };
+		3665D43D261F2582007CF503 /* Bud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bud.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3665D440261F2582007CF503 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3665D442261F2582007CF503 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3665D444261F2582007CF503 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
+		3665D447261F2582007CF503 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3665D449261F2582007CF503 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3665D44C261F2582007CF503 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3665D44E261F2582007CF503 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3665D453261F2583007CF503 /* BudTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BudTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3665D459261F2583007CF503 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3665D45E261F2583007CF503 /* BudUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BudUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3665D462261F2583007CF503 /* BudUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudUITests.swift; sourceTree = "<group>"; };
+		3665D464261F2583007CF503 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3665D475261F25C7007CF503 /* Transactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transactions.swift; sourceTree = "<group>"; };
+		3665D47D261F25F9007CF503 /* TransactionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsService.swift; sourceTree = "<group>"; };
+		3665D483261F2668007CF503 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		3665D48C261F26EF007CF503 /* StringHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringHelpers.swift; sourceTree = "<group>"; };
+		3665D4AC261F3DCC007CF503 /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
+		3665D4B5261F41C3007CF503 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
+		3665D4B6261F41C3007CF503 /* TransactionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionTableViewCell.xib; sourceTree = "<group>"; };
+		3665D4BF261F4737007CF503 /* ImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewExtension.swift; sourceTree = "<group>"; };
+		3665D4D826204B73007CF503 /* CurrencyFormater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormater.swift; sourceTree = "<group>"; };
+		3665D4E2262050C1007CF503 /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
+		3665D4E82620518E007CF503 /* DataTestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTestHelper.swift; sourceTree = "<group>"; };
+		3665D4F0262051EB007CF503 /* TransactionServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionServiceMock.swift; sourceTree = "<group>"; };
+		3665D4F526205F73007CF503 /* TransactionServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionServiceTests.swift; sourceTree = "<group>"; };
+		3665D4FB2620622D007CF503 /* TransactionModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModelTests.swift; sourceTree = "<group>"; };
+		3665D504262063D8007CF503 /* TransactionViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModelTests.swift; sourceTree = "<group>"; };
+		3665D51526206E04007CF503 /* StringHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringHelperTests.swift; sourceTree = "<group>"; };
+		3665D51D26206EAD007CF503 /* CurrencyFormaterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormaterTests.swift; sourceTree = "<group>"; };
+		3665D522262074BF007CF503 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3665D575262314A8007CF503 /* TableViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellExtension.swift; sourceTree = "<group>"; };
+		57D10E91B06E32E34A0F367E /* Pods-Bud-BudUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bud-BudUITests.release.xcconfig"; path = "Target Support Files/Pods-Bud-BudUITests/Pods-Bud-BudUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5C6F98FA5EE69F0CD1AACA95 /* Pods_Bud.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bud.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73232C7ADF06BD452C86B8FC /* Pods-Bud-BudUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bud-BudUITests.debug.xcconfig"; path = "Target Support Files/Pods-Bud-BudUITests/Pods-Bud-BudUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AD78576545477AA5371BAF60 /* Pods-Bud.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bud.debug.xcconfig"; path = "Target Support Files/Pods-Bud/Pods-Bud.debug.xcconfig"; sourceTree = "<group>"; };
+		B2DC63ED2D10CEC4C42459E6 /* Pods_Bud_BudUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bud_BudUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9CC36BCC213010E73233B62 /* Pods-BudTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BudTests.debug.xcconfig"; path = "Target Support Files/Pods-BudTests/Pods-BudTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DBF5747F09C6CD73A80C0D7E /* Pods-Bud.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bud.release.xcconfig"; path = "Target Support Files/Pods-Bud/Pods-Bud.release.xcconfig"; sourceTree = "<group>"; };
+		E509B4B6606BA291C696353F /* Pods_BudTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BudTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3665D43A261F2582007CF503 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				569BAC8FB3521711BF50277F /* Pods_Bud.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3665D450261F2583007CF503 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4512C5C35EDA585E543DA604 /* Pods_BudTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3665D45B261F2583007CF503 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE3B273F3DB33D3EAC40078D /* Pods_Bud_BudUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3665D434261F2582007CF503 = {
+			isa = PBXGroup;
+			children = (
+				3665D43F261F2582007CF503 /* Bud */,
+				3665D456261F2583007CF503 /* BudTests */,
+				3665D461261F2583007CF503 /* BudUITests */,
+				3665D43E261F2582007CF503 /* Products */,
+				517B80AD90A86678EA2F40C7 /* Pods */,
+				6C521C62F624AFE3180D08CE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3665D43E261F2582007CF503 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3665D43D261F2582007CF503 /* Bud.app */,
+				3665D453261F2583007CF503 /* BudTests.xctest */,
+				3665D45E261F2583007CF503 /* BudUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3665D43F261F2582007CF503 /* Bud */ = {
+			isa = PBXGroup;
+			children = (
+				3665D522262074BF007CF503 /* README.md */,
+				3665D4B4261F4192007CF503 /* View */,
+				3665D49A261F35B1007CF503 /* ViewController */,
+				3665D499261F3532007CF503 /* ViewModel */,
+				3665D48B261F26C6007CF503 /* Helpers */,
+				3665D482261F2619007CF503 /* Localizable */,
+				3665D474261F25AE007CF503 /* Model */,
+				3665D473261F25A7007CF503 /* Service */,
+				3665D440261F2582007CF503 /* AppDelegate.swift */,
+				3665D442261F2582007CF503 /* SceneDelegate.swift */,
+				3665D449261F2582007CF503 /* Assets.xcassets */,
+				3665D44B261F2582007CF503 /* LaunchScreen.storyboard */,
+				3665D44E261F2582007CF503 /* Info.plist */,
+			);
+			path = Bud;
+			sourceTree = "<group>";
+		};
+		3665D456261F2583007CF503 /* BudTests */ = {
+			isa = PBXGroup;
+			children = (
+				3665D51426206DE9007CF503 /* HelperTests */,
+				3665D503262063C1007CF503 /* ViewModelTests */,
+				3665D4FA2620621A007CF503 /* ModelTests */,
+				3665D4E726205178007CF503 /* DataTestHelper */,
+				3665D4E126205090007CF503 /* Mocks */,
+				3665D4E026205058007CF503 /* ServiceTests */,
+				3665D459261F2583007CF503 /* Info.plist */,
+			);
+			path = BudTests;
+			sourceTree = "<group>";
+		};
+		3665D461261F2583007CF503 /* BudUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3665D462261F2583007CF503 /* BudUITests.swift */,
+				3665D464261F2583007CF503 /* Info.plist */,
+			);
+			path = BudUITests;
+			sourceTree = "<group>";
+		};
+		3665D473261F25A7007CF503 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3665D47D261F25F9007CF503 /* TransactionsService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		3665D474261F25AE007CF503 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3665D475261F25C7007CF503 /* Transactions.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3665D482261F2619007CF503 /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				3665D483261F2668007CF503 /* Localizable.strings */,
+			);
+			path = Localizable;
+			sourceTree = "<group>";
+		};
+		3665D48B261F26C6007CF503 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3665D48C261F26EF007CF503 /* StringHelpers.swift */,
+				3665D4D826204B73007CF503 /* CurrencyFormater.swift */,
+				3665D4BF261F4737007CF503 /* ImageViewExtension.swift */,
+				3665D575262314A8007CF503 /* TableViewCellExtension.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		3665D499261F3532007CF503 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3665D4AC261F3DCC007CF503 /* TransactionViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3665D49A261F35B1007CF503 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3665D444261F2582007CF503 /* TransactionViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		3665D4B4261F4192007CF503 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3665D4B5261F41C3007CF503 /* TransactionTableViewCell.swift */,
+				3665D4B6261F41C3007CF503 /* TransactionTableViewCell.xib */,
+				3665D446261F2582007CF503 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3665D4E026205058007CF503 /* ServiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				3665D4F526205F73007CF503 /* TransactionServiceTests.swift */,
+			);
+			path = ServiceTests;
+			sourceTree = "<group>";
+		};
+		3665D4E126205090007CF503 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				3665D4E2262050C1007CF503 /* URLSessionMock.swift */,
+				3665D4F0262051EB007CF503 /* TransactionServiceMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		3665D4E726205178007CF503 /* DataTestHelper */ = {
+			isa = PBXGroup;
+			children = (
+				3665D4E82620518E007CF503 /* DataTestHelper.swift */,
+			);
+			path = DataTestHelper;
+			sourceTree = "<group>";
+		};
+		3665D4FA2620621A007CF503 /* ModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				3665D4FB2620622D007CF503 /* TransactionModelTests.swift */,
+			);
+			path = ModelTests;
+			sourceTree = "<group>";
+		};
+		3665D503262063C1007CF503 /* ViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				3665D504262063D8007CF503 /* TransactionViewModelTests.swift */,
+			);
+			path = ViewModelTests;
+			sourceTree = "<group>";
+		};
+		3665D51426206DE9007CF503 /* HelperTests */ = {
+			isa = PBXGroup;
+			children = (
+				3665D51526206E04007CF503 /* StringHelperTests.swift */,
+				3665D51D26206EAD007CF503 /* CurrencyFormaterTests.swift */,
+			);
+			path = HelperTests;
+			sourceTree = "<group>";
+		};
+		517B80AD90A86678EA2F40C7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AD78576545477AA5371BAF60 /* Pods-Bud.debug.xcconfig */,
+				DBF5747F09C6CD73A80C0D7E /* Pods-Bud.release.xcconfig */,
+				73232C7ADF06BD452C86B8FC /* Pods-Bud-BudUITests.debug.xcconfig */,
+				57D10E91B06E32E34A0F367E /* Pods-Bud-BudUITests.release.xcconfig */,
+				D9CC36BCC213010E73233B62 /* Pods-BudTests.debug.xcconfig */,
+				0CD8F62C77CADDA9EC4AB23B /* Pods-BudTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6C521C62F624AFE3180D08CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C6F98FA5EE69F0CD1AACA95 /* Pods_Bud.framework */,
+				B2DC63ED2D10CEC4C42459E6 /* Pods_Bud_BudUITests.framework */,
+				E509B4B6606BA291C696353F /* Pods_BudTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3665D43C261F2582007CF503 /* Bud */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3665D467261F2583007CF503 /* Build configuration list for PBXNativeTarget "Bud" */;
+			buildPhases = (
+				EB495EA0C4697CE15BE86F68 /* [CP] Check Pods Manifest.lock */,
+				3665D439261F2582007CF503 /* Sources */,
+				3665D43A261F2582007CF503 /* Frameworks */,
+				3665D43B261F2582007CF503 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bud;
+			productName = Bud;
+			productReference = 3665D43D261F2582007CF503 /* Bud.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3665D452261F2583007CF503 /* BudTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3665D46A261F2583007CF503 /* Build configuration list for PBXNativeTarget "BudTests" */;
+			buildPhases = (
+				D68E24ACC5F1363965FE97DB /* [CP] Check Pods Manifest.lock */,
+				3665D44F261F2583007CF503 /* Sources */,
+				3665D450261F2583007CF503 /* Frameworks */,
+				3665D451261F2583007CF503 /* Resources */,
+				D188288CE394905284212847 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3665D455261F2583007CF503 /* PBXTargetDependency */,
+			);
+			name = BudTests;
+			productName = BudTests;
+			productReference = 3665D453261F2583007CF503 /* BudTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3665D45D261F2583007CF503 /* BudUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3665D46D261F2583007CF503 /* Build configuration list for PBXNativeTarget "BudUITests" */;
+			buildPhases = (
+				04D5B4A08FA17809D5804934 /* [CP] Check Pods Manifest.lock */,
+				3665D45A261F2583007CF503 /* Sources */,
+				3665D45B261F2583007CF503 /* Frameworks */,
+				3665D45C261F2583007CF503 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3665D460261F2583007CF503 /* PBXTargetDependency */,
+			);
+			name = BudUITests;
+			productName = BudUITests;
+			productReference = 3665D45E261F2583007CF503 /* BudUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3665D435261F2582007CF503 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					3665D43C261F2582007CF503 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					3665D452261F2583007CF503 = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
+						TestTargetID = 3665D43C261F2582007CF503;
+					};
+					3665D45D261F2583007CF503 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 3665D43C261F2582007CF503;
+					};
+				};
+			};
+			buildConfigurationList = 3665D438261F2582007CF503 /* Build configuration list for PBXProject "Bud" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3665D434261F2582007CF503;
+			productRefGroup = 3665D43E261F2582007CF503 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3665D43C261F2582007CF503 /* Bud */,
+				3665D452261F2583007CF503 /* BudTests */,
+				3665D45D261F2583007CF503 /* BudUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3665D43B261F2582007CF503 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3665D4B8261F41C3007CF503 /* TransactionTableViewCell.xib in Resources */,
+				3665D44D261F2582007CF503 /* LaunchScreen.storyboard in Resources */,
+				3665D484261F2668007CF503 /* Localizable.strings in Resources */,
+				3665D44A261F2582007CF503 /* Assets.xcassets in Resources */,
+				3665D448261F2582007CF503 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3665D451261F2583007CF503 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3665D45C261F2583007CF503 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04D5B4A08FA17809D5804934 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bud-BudUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D188288CE394905284212847 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BudTests/Pods-BudTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BudTests/Pods-BudTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BudTests/Pods-BudTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D68E24ACC5F1363965FE97DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BudTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB495EA0C4697CE15BE86F68 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bud-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3665D439261F2582007CF503 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3665D445261F2582007CF503 /* TransactionViewController.swift in Sources */,
+				3665D441261F2582007CF503 /* AppDelegate.swift in Sources */,
+				3665D4B7261F41C3007CF503 /* TransactionTableViewCell.swift in Sources */,
+				3665D48D261F26EF007CF503 /* StringHelpers.swift in Sources */,
+				3665D576262314A8007CF503 /* TableViewCellExtension.swift in Sources */,
+				3665D4D926204B73007CF503 /* CurrencyFormater.swift in Sources */,
+				3665D4C0261F4737007CF503 /* ImageViewExtension.swift in Sources */,
+				3665D476261F25C7007CF503 /* Transactions.swift in Sources */,
+				3665D47E261F25F9007CF503 /* TransactionsService.swift in Sources */,
+				3665D443261F2582007CF503 /* SceneDelegate.swift in Sources */,
+				3665D4AD261F3DCC007CF503 /* TransactionViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3665D44F261F2583007CF503 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3665D4FC2620622D007CF503 /* TransactionModelTests.swift in Sources */,
+				3665D4E3262050C1007CF503 /* URLSessionMock.swift in Sources */,
+				3665D51626206E04007CF503 /* StringHelperTests.swift in Sources */,
+				3665D4E92620518E007CF503 /* DataTestHelper.swift in Sources */,
+				3665D51E26206EAD007CF503 /* CurrencyFormaterTests.swift in Sources */,
+				3665D4F626205F73007CF503 /* TransactionServiceTests.swift in Sources */,
+				3665D4F1262051EB007CF503 /* TransactionServiceMock.swift in Sources */,
+				3665D505262063D8007CF503 /* TransactionViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3665D45A261F2583007CF503 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3665D463261F2583007CF503 /* BudUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3665D455261F2583007CF503 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3665D43C261F2582007CF503 /* Bud */;
+			targetProxy = 3665D454261F2583007CF503 /* PBXContainerItemProxy */;
+		};
+		3665D460261F2583007CF503 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3665D43C261F2582007CF503 /* Bud */;
+			targetProxy = 3665D45F261F2583007CF503 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3665D446261F2582007CF503 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3665D447261F2582007CF503 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3665D44B261F2582007CF503 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3665D44C261F2582007CF503 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3665D465261F2583007CF503 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3665D466261F2583007CF503 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3665D468261F2583007CF503 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD78576545477AA5371BAF60 /* Pods-Bud.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Bud/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = priyesh.Bud;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3665D469261F2583007CF503 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBF5747F09C6CD73A80C0D7E /* Pods-Bud.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Bud/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = priyesh.Bud;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3665D46B261F2583007CF503 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9CC36BCC213010E73233B62 /* Pods-BudTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BudTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = priyesh.BudTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bud.app/Bud";
+			};
+			name = Debug;
+		};
+		3665D46C261F2583007CF503 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CD8F62C77CADDA9EC4AB23B /* Pods-BudTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BudTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = priyesh.BudTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bud.app/Bud";
+			};
+			name = Release;
+		};
+		3665D46E261F2583007CF503 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73232C7ADF06BD452C86B8FC /* Pods-Bud-BudUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BudUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = priyesh.BudUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Bud;
+			};
+			name = Debug;
+		};
+		3665D46F261F2583007CF503 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57D10E91B06E32E34A0F367E /* Pods-Bud-BudUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BudUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = priyesh.BudUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Bud;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3665D438261F2582007CF503 /* Build configuration list for PBXProject "Bud" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3665D465261F2583007CF503 /* Debug */,
+				3665D466261F2583007CF503 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3665D467261F2583007CF503 /* Build configuration list for PBXNativeTarget "Bud" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3665D468261F2583007CF503 /* Debug */,
+				3665D469261F2583007CF503 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3665D46A261F2583007CF503 /* Build configuration list for PBXNativeTarget "BudTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3665D46B261F2583007CF503 /* Debug */,
+				3665D46C261F2583007CF503 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3665D46D261F2583007CF503 /* Build configuration list for PBXNativeTarget "BudUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3665D46E261F2583007CF503 /* Debug */,
+				3665D46F261F2583007CF503 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3665D435261F2582007CF503 /* Project object */;
+}
